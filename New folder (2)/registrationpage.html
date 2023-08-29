@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+</head>
+<body>
+   <section class="header">
+  <nav>
+    
+
+   
+  <style>
+    body {
+     
+      background-image: url('google.jpg');
+      background-size: cover;
+      font-family:' Times New Roman';
+      color: #fff;
+
+    }
+    
+    .container {
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      margin-top: 150px;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 10px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="age"],
+    input[type="gender"],
+    input[type="contact"],
+    input[type="email"],
+    input[type="password"]
+  
+     {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      border-radius: 3px;
+    }
+    
+    input[type="registor"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #black;
+      color: #fff;
+      cursor: pointer;
+      text-align: center;
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>REGISTRATION FORM</h2>
+    <form id="registrationForm">
+      <div class="form-group">
+
+        <label for="name"> FULL-NAME</label>
+        <input type="text" id="name" required>
+        </div>
+
+         <div class="form-group">
+        <label for="age">AGE</label>
+        <input type="text" id= "age" required>
+        </div>
+
+         <div class="form-group">
+         <label for="Gender">GENDER</label>
+         <input type="text" id="gender" required>
+          </div>
+
+         <div class="form-group">
+        <label for="contact">CONTACT</label>
+        <input type="text" id="contact" required>
+         </div>
+
+      <div class="form-group">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" required>
+
+      </div>
+      <div class="form-group">
+        <label for="password">PASSWORD</label>
+        <input type="password" id="password" required>
+      </div>
+
+
+        <input type="submit" value="REGISTOR">
+
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form values
+      var name = document.getElementById('name').value;
+       var age = document.getElementById('age').value;
+        var gender = document.getElementById('gender').value;
+        var contact = document.getElementById('contact').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+
+      // Perform form validation
+      if (name === '' || email === '' || password === '') {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      // Perform registration logic here (e.g., send data to server)
+
+      // Clear form inputs
+      document.getElementById('name').value = '';
+      document.getElementById('age').value = '';
+      document.getElementById('gender').value = '';
+      document.getElementById('contact').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('password').value = '';
+
+      // Display success message
+      alert('Registration successful!');
+    });
+  </script>
+</body>
+</html>
